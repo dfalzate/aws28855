@@ -45,6 +45,10 @@ app.post('/user', (req, res) => {
     })
 })
 
+app.get("/", (req, res) => {
+  res.status(200).send("<h3>Hola aws</h3>");
+});
+
 const PORT=process.env.PORT || 3000
 const server = app.listen(PORT, () => console.log(`🚀 Server started on port http://localhost:${PORT}`))
 server.on('error', (err) => console.log(err));
